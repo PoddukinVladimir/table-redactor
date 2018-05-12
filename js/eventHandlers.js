@@ -18,7 +18,6 @@ function hideErrorMessage() {
     document.getElementById('json-err-msg').style.visibility = 'hidden';
 }
 
-// TODO
 function onEditableAreaClick(event) {
     var row = getTargetRow(event.target, 'TR');
 
@@ -29,6 +28,15 @@ function onEditableAreaClick(event) {
 
 function onRowAdded() {
     TableBuilder.addRow();
+}
+
+function onRowDrop() {
+    var droppedRow = document.getElementById(event.dataTransfer.getData('text'));
+    droppedRow.id = '';
+
+    var targetRow = getTargetRow(event.target, 'TR');
+
+    TableBuilder.swapRows(droppedRow, targetRow);
 }
 
 function onJsonExport() {
@@ -77,4 +85,16 @@ function onLocalSave() {
     tableDataService.updateModel();
 
     window.localStorage.setItem('model', JSON.stringify(tableDataService.getData()));
+}
+
+function onFileSelect() {
+    var file = event.target.files[0];
+
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                // event.target point to FileReader
+                document.getElementById('editableTextArea').value = event.target.result;
+            };
+
+            reader.readAsText(file);
 }

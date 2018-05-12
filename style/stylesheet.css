@@ -76,7 +76,8 @@ textarea {
     margin-top: 20px;
 }
 
-.button-export, .button-import, .button-save {
+.button-export, .button-import,
+.button-save, .button-add-file {
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -91,8 +92,7 @@ textarea {
 .error-message {
     margin-top: 10px;
     visibility: hidden;
-    color:
-            red;
+    color: red;
 }
 
 .button-save {
@@ -101,4 +101,35 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.file-input-wrap {
+    position: relative;
+}
+
+.button-add-file {
+    margin-top: 20px;
+    background: gray;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Hide input and put it on top of styled button */
+.file-input {
+    text-align: center;
+    font-size: 28px;
+    width: 130px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer;
 }
