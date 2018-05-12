@@ -1,0 +1,95 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    color: white;
+    background: black;
+}
+
+.td-text {
+    height: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table-edit-container {
+    text-align: center;
+}
+
+.edit-column {
+    width: 1%;
+}
+
+.table-button-add {
+    background: url(../img/add-icon.png) center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-size: 70px;
+}
+
+.table-button-remove {
+    background: url(../img/remove-icon.png) center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-size: 75px;
+}
+
+.table-button-remove, .table-button-add:hover {
+    cursor: pointer;
+}
+
+.table-button-remove, .table-button-add:focus {
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+}
+
+.export-wrap, .import-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-export, .button-import, .button-save {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.error-message {
+    margin-top: 10px;
+    visibility: hidden;
+    color:
+            red;
+}
+
+.button-save {
+    margin-top: 20px;
+    background: blue;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

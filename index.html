@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/stylesheet.css">
+</head>
+<body>
+<table class="table">
+    <tr class="table-head">
+        <th>Name</th>
+        <th>Value</th>
+        <th class="edit-column">
+            <button class="table-button-add" id="add-button"></button>
+        </th>
+    </tr>
+    <tbody id="editableTableArea">
+
+    </tbody>
+</table>
+<div class="export-wrap">
+    <button class="button-export" id="export-json-button">Export JSON</button>
+    <button class="button-export" id="export-csv-button">Export CSV</button>
+</div>
+<textarea name="" id="editableTextArea" cols="30" rows="10"></textarea>
+<span class="error-message" id="json-err-msg">Invalid input</span>
+<div class="import-wrap">
+    <button class="button-import" id="import-json-button">Import JSON</button>
+    <button class="button-import" id="import-csv-button">Import CSV</button>
+</div>
+
+<button class="button-save" id="save-button">Save</button>
+
+<script src="js/csv-convert.js"></script>
+<script src="js/eventUtil.js"></script>
+<script src="js/dataService.js"></script>
+<script src="js/eventHandlers.js"></script>
+<script src="js/tableEditable.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
