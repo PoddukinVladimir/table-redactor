@@ -1,6 +1,7 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
+    table-layout: fixed;
     width: 100%;
 }
 
@@ -12,6 +13,10 @@ td, th {
 
 td:focus {
     outline-color: blue;
+}
+
+.table-head {
+    cursor: pointer;
 }
 
 th {
@@ -29,7 +34,10 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #85a4ff;
-    cursor: pointer;
+}
+
+tbody:hover {
+    cursor: -webkit-grab;
 }
 
 .table-edit-container {
@@ -37,7 +45,7 @@ tr:hover {
 }
 
 .edit-column {
-    width: 1%;
+    width: 30px;
 }
 
 .table-button-add {
