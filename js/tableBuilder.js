@@ -3,6 +3,7 @@ var TableBuilder = (function () {
     var data = tableDataService.getData();
 
     function addRow(colDefs) {
+        console.log('in IE');
         var row = document.createElement('tr');
 
         row.setAttribute('draggable', 'true');

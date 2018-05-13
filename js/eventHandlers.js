@@ -30,7 +30,9 @@ function onRowAdded() {
     TableBuilder.addRow();
 }
 
-function onRowDrop() {
+function onRowDrop(event) {
+    event.preventDefault();
+
     var droppedRow = document.getElementById(event.dataTransfer.getData('text'));
     droppedRow.id = '';
 
@@ -87,7 +89,9 @@ function onLocalSave() {
     window.localStorage.setItem('model', JSON.stringify(tableDataService.getData()));
 }
 
-function onFileSelect() {
+function onFileSelect(event) {
+    event.preventDefault();
+
     var file = event.target.files[0];
 
             var reader = new FileReader();
